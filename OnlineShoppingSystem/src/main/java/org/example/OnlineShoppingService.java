@@ -49,6 +49,7 @@ public class OnlineShoppingService {
         Order order = new Order(orderId, user, orderItems);
         orderMap.put(orderId, order);
         user.addOrders(order);
+        cart.clearCart();
 
         if(paymentService.processPayment(order.getTotalAmount())) {
             order.setOrderStatus(OrderStatus.PROCESSING);
