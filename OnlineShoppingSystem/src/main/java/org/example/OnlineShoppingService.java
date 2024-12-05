@@ -54,7 +54,7 @@ public class OnlineShoppingService {
         if(paymentService.processPayment(order.getTotalAmount())) {
             order.setOrderStatus(OrderStatus.PROCESSING);
         } else {
-            order.setOrderStatus(OrderStatus.PROCESSING);
+            order.setOrderStatus(OrderStatus.CANCELED);
             // revert the quantity
             for(OrderItem item: orderItems) {
                 Product product = item.getProduct();

@@ -50,7 +50,7 @@ public class Board {
             return true;
         }
 
-        // check diagonal-1 : left to right:
+        // check diagonal-2 : right to left:
         return (grid[0][2] != '-' && grid[0][2] == grid[1][1] && grid[1][1] == grid[2][0]);
     }
 

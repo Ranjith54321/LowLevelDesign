@@ -41,7 +41,7 @@ public class LRUCache<K, V> {
             addToHead(node);
             if(cache.size() > capacity) {
                 Node nodeToBeRemoved = removeTail();
-                cache.remove(nodeToBeRemoved.key);
+                cache.remove(nodeToBeRemoved.key); // we must remove from map..
             }
         }
     }
